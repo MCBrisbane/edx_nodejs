@@ -3,7 +3,8 @@
 Module 1 Assignment Lab: CSV to JSON Converter
 
 Command line example usage:
-node moduel1.js /tmp/customer-data.csv 
+
+`node moduel1.js /tmp/customer-data.csv`
 
 
 ## Design Choices:
