@@ -14,23 +14,23 @@
 *  Note - Only tested for Linux/Unix and DOS. Not tested for Mac or other OSs
 */
 
-const fs			= require('fs')
+const fs		= require('fs')
 const osName 		= require('os-name');
-const c2j			= require('csvtojson')
+const c2j		= require('csvtojson')
 const readTextFile 	= require('read-text-file');
 const replaceStr 	= require('replace-in-file')
-const detectNewline = require('detect-newline');
+const detectNewline 	= require('detect-newline');
 
 // Constants for end of line checking/replacing and Debug output
 const replaceStrLFGlobally   	= /\n/g
 const replaceStrCRLFGlobally 	= /\r\n/g
-const DOSEOL  					= '\r\n'
-const UnixEOL 					= '\n'
-const Debug 					= true
+const DOSEOL  			= '\r\n'
+const UnixEOL 			= '\n'
+const Debug 			= false
 
 // Set default values as per Linux OS
-var localOSFormat 	= replaceStrLFGlobally 	
-var inputFileFormat = DOSEOL   				
+var localOSFormat 		= replaceStrLFGlobally 	
+var inputFileFormat 		= DOSEOL   				
 
 
 const detectEOLs = (csvFilePath, callback) => {
